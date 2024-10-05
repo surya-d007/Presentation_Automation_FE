@@ -13,7 +13,7 @@ function SideBarTest() {
               className="h-24 w-24 object-cover rounded-full"
             />
           </div>
-          <div className="w-2/3">
+          <div className="w-2/3 pl-6">
             <p className="text-3xl font-bold">Surya D</p>
           </div>
         </div>
@@ -24,37 +24,35 @@ function SideBarTest() {
           <div className="space-y-2">
             {/* Single line for each detail, using flexbox */}
             <div className="flex">
-              <p className="font-bold min-w-[120px]">School</p>
-              <p className="whitespace-nowrap">: Scope</p>
+              <p className="font-bold ">School</p>
+              <p className="">: Scope</p>
             </div>
 
             <div className="flex">
-              <p className="font-bold min-w-[120px]">College</p>
-              <p className="whitespace-nowrap">: Vit Chennai</p>
+              <p className="font-bold ">College</p>
+              <p className="">: Vit Chennai</p>
             </div>
 
             <div className="flex">
-              <p className="font-bold min-w-[120px]">Degree</p>
-              <p className="whitespace-nowrap">: B.Tech</p>
+              <p className="font-bold ">Degree</p>
+              <p className="">: B.Tech</p>
             </div>
 
             <div className="flex">
-              <p className="font-bold min-w-[120px]">Course</p>
-              <p className="whitespace-nowrap overflow-hidden">
-                : Computer Science Engineering
-              </p>
+              <p className="font-bold ">Course</p>
+              <p className=" overflow-hidden">: Computer Science Engineering</p>
             </div>
 
             <div className="flex">
-              <p className="font-bold min-w-[120px]">Ph No</p>
-              <p className="whitespace-nowrap">: 1234567890</p>
+              <p className="font-bold ">Ph No</p>
+              <p className="">: 1234567890</p>
             </div>
 
             {/* Email with text wrapping */}
             <div className="flex">
-              <p className="font-bold min-w-[120px]">Email</p>
+              <p className="font-bold ">Email</p>
               <p className="break-words overflow-hidden">
-                : suryaaverylongemailaddress1234567890@example.com
+                : surya.d.0004@gmail.com
               </p>
             </div>
           </div>
