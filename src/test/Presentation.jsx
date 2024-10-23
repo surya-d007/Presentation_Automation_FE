@@ -3,7 +3,7 @@ import SideBarTest from "../componets/SideBarTest";
 import ScreenShare from "../componets/ScreenShare";
 function Presentation() {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen mb-5">
       {/* Left Sidebar - 25% width */}
       <div className="w-[20vw] bg-gray-300  ">
         <SideBarTest />
@@ -43,7 +43,7 @@ function Presentation() {
         </div>
 
         {/* Screen Sharing Area */}
-        <div className=" h-[65vh] mb-4 flex justify-center items-center">
+        <div className=" h-[65vh]  mb-4 ">
           <ScreenShare />
         </div>
         {/* Controls Section */}
