@@ -3,15 +3,15 @@ import SideBarTest from "../componets/SideBarTest";
 import ScreenShare from "../componets/ScreenShare";
 function Presentation() {
   return (
-    <div className="flex h-screen mb-5">
+    <div className="flex h-screen ">
       {/* Left Sidebar - 25% width */}
       <div className="w-[20vw] bg-gray-300  ">
         <SideBarTest />
       </div>
 
       {/* Right Section - 75% width */}
-      <div className="w-[80vw] p-4 flex flex-col">
-        <div className="border border-black mb-8 ">
+      <div className="w-[80vw] h-screen p-4 flex flex-col">
+        <div className="border border-black  ">
           <h1>Test Details:</h1>
           <div className="  mb-4 flex">
             <div className="flex flex-row w-full">
@@ -43,10 +43,9 @@ function Presentation() {
         </div>
 
         {/* Screen Sharing Area */}
-        <div className=" h-[65vh]  mb-4 ">
+        <div className="   ">
           <ScreenShare />
         </div>
-        {/* Controls Section */}
       </div>
     </div>
   );

@@ -13,7 +13,6 @@ function ScreenShare() {
       try {
         const stream = await navigator.mediaDevices.getDisplayMedia({
           video: true,
-          audio: false, // Audio off for screen sharing
         });
         if (videoRef.current) {
           videoRef.current.srcObject = stream;
@@ -63,31 +62,33 @@ function ScreenShare() {
 
   return (
     <div className="App">
-      {/* Video element to display the shared screen */}
-      <div className="flex justify-center items-center border">
-        <div className="w-[90%] h-[80%] border border-black border-4 relative">
-          <video
-            ref={videoRef}
-            autoPlay
-            className="bg-black w-full h-full"
-          ></video>
-          <div className="absolute bottom-5 right-0 ">
-            <Camera mediaStream={mediaStream} />
-          </div>
+      {/* Video container for responsive design */}
+      <div className="relative flex justify-center items-center w-full h-[60vh] md:h-[70vh] lg:h-[75vh] my-7 ">
+        <video
+          ref={videoRef}
+          autoPlay
+          className=" h-full object-contain  border border-green-700  rounded-md border-4"
+        ></video>
+        <div className="absolute bottom-5 right-5">
+          <Camera mediaStream={mediaStream} />
         </div>
       </div>
 
       {/* Button controls for screen sharing and webcam */}
       <div className="controls flex justify-center space-x-4 mt-4">
+        <button className="px-4 py-2 bg-[#7204FF] text-white font-bold rounded hover:bg-green-700 transition duration-300">
+          Start Presentation Now
+        </button>
+
         <button
           onClick={handleScreenShare}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300"
+          className="px-4 py-2 bg-[#7204FF] font-bold text-white rounded transition duration-300"
         >
           {isScreenSharing ? "Stop Sharing" : "Share Screen"}
         </button>
         <button
           onClick={handleWebcam}
-          className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700 transition duration-300"
+          className="px-4 py-2 bg-[#7204FF] font-bold text-white rounded hover:bg-green-700 transition duration-300"
         >
           {mediaStream ? "Stop Webcam" : "Start Webcam"}
         </button>
